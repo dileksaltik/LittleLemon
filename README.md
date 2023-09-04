@@ -6,7 +6,7 @@ REST API Project
 **Scope**
 You will create a fully functioning API project for the Little Lemon restaurant so that the client application developers can use the APIs to develop web and mobile applications. People with different roles will be able to browse, add and edit menu items, place orders, browse orders, assign delivery crew to orders and finally deliver the orders. 
 
-**Structure **
+**Structure**
 You will create one single Django app called LittleLemonAPI and implement all API endpoints in it. Use pipenv to manage the dependencies in the virtual environment.
 
 **User groups**
@@ -30,7 +30,7 @@ You are required to display error messages with appropriate HTTP status codes fo
 
 404 – Not found 		If the request was made for a non-existing resource
 
-API endpoints 
+**API endpoints** 
 Here are all the required API routes for this project grouped into several categories.
 
 User registration and token generation endpoints 
@@ -46,10 +46,9 @@ You can use Djoser in your project to automatically create the following endpoin
 
 /token/login/		Anyone with a valid username and password 	POST			Generates access tokens that can be used in other API calls in this project
 
-**
-Menu-items endpoints **
+**Menu-items endpoints**
 
-Endpoint				Role						Method				Purpose
+**Endpoint				Role						Method				Purpose**
 
 /api/menu-items			Customer, delivery crew			GET					Lists all menu items. Return a 200 – Ok HTTP status code
 
@@ -69,9 +68,9 @@ Endpoint				Role						Method				Purpose
 
 /api/menu-items/{menuItem}	Manager					DELETE				Deletes menu item
 
-**User group management endpoints
+**User group management endpoints**
 
-Endpoint					Role				Method			Purpose**
+**Endpoint					Role				Method			Purpose**
 
 /api/groups/manager/users			Admin			GET				Returns all managers
 
@@ -84,9 +83,9 @@ Endpoint					Role				Method			Purpose**
 /api/groups/delivery-crew/users		Manager			POST				Assigns the user in the payload to delivery crew group and returns 201-Created HTTP
 /api/groups/delivery-crew/users/{userId}	Manager			DELETE			Removes this user from the manager group and returns 200 – Success if everything is 																	okay.If the user is not found, returns  404 – Not found
 
-Cart management endpoints 
+**Cart management endpoints**
 
-Endpoint					Role				Method		Purpose
+**Endpoint					Role				Method		Purpose**
 
 /api/cart/menu-items			Customer			GET			Returns current items in the cart for the current user token
 
@@ -94,9 +93,9 @@ Endpoint					Role				Method		Purpose
 
 /api/cart/menu-items			Customer			DELETE		Deletes all menu items created by the current user token
 
-Order management endpoints
+**Order management endpoints**
 
-Endpoint				Role			Method		Purpose
+**Endpoint				Role			Method		Purpose**
 
 /api/orders				Customer		GET		Returns all orders with order items created by this user
 
@@ -114,12 +113,10 @@ Endpoint				Role			Method		Purpose
 
 /api/orders/{orderId}			Delivery crew		PATCH			A delivery crew can use this endpoint to update the order status to 0 or 1. The delivery crew 											will not be able to update anything else in this order.
 
-Additional step
+**Additional step**
 
 Implement proper filtering, pagination and sorting capabilities for /api/menu-items and /api/orders endpoints
 
-
- 
 
 1.The admin can assign users to the manager group
 
@@ -164,7 +161,7 @@ Implement proper filtering, pagination and sorting capabilities for /api/menu-it
 21.	Customers can browse their own orders
 
 
-Role		id	username	password	token
+**Role		id	username	password	token**
 admin		1	admin		admin		8a569ebb479169924c4c18fdc6ff42e0662482d7
 manager		2	joedohn		admin@10!	b804487ea59de355de7ed1a34dd3bd014d1cf1c3	
 delivery crew   4	ginalucky 	admin@10!	a5939a2ade75b776d8ee6cd0d83e29a136fa2967
@@ -174,7 +171,7 @@ customer  	5	alican 		admin@10!	86e4fe1ad2f0741413e6bd99e125823f0e57ca4b
 user		12 	delivery_crew_5 admin@10!   **you can use this user to take token and assign to delivery_crew group by using post method to this endpoint http://127.0.0.1:8000/api/groups/deliverycrew/users/ in the review questions this endpoint is written wrong, to the request body you need to write username delivery_crew_5
  
 
-To test last two questions. You need to use "POST" http://127.0.0.1:8000/api/cart/menu-items/ this endpoint with customer token. This will allow customer to add menu items into his cart. You need menuitem, quantity for request body. Now the customer has menuitems in his cart. Then convert cart to order, you will use "POST" http://127.0.0.1:8000/api/cart/orders/ 
+**To test last two questions.** You need to use "POST" http://127.0.0.1:8000/api/cart/menu-items/ this endpoint with customer token. This will allow customer to add menu items into his cart. You need menuitem, quantity for request body. Now the customer has menuitems in his cart. Then convert cart to order, you will use "POST" http://127.0.0.1:8000/api/cart/orders/ 
 
  
 
