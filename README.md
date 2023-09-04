@@ -117,7 +117,7 @@ You can use Djoser in your project to automatically create the following endpoin
 
 Implement proper filtering, pagination and sorting capabilities for /api/menu-items and /api/orders endpoints
 
-
+**Test Scope**
 1.The admin can assign users to the manager group
 
 2.	You can access the manager group with an admin token
