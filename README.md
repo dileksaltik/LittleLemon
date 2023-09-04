@@ -1,6 +1,6 @@
 # LittleLemon
 
-****REST API Project****
+**REST API Project**
 
 
 **Scope**
