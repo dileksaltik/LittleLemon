@@ -3,22 +3,22 @@
 REST API Project
 
 
-Scope
+**Scope**
 You will create a fully functioning API project for the Little Lemon restaurant so that the client application developers can use the APIs to develop web and mobile applications. People with different roles will be able to browse, add and edit menu items, place orders, browse orders, assign delivery crew to orders and finally deliver the orders. 
 
-Structure 
+**Structure **
 You will create one single Django app called LittleLemonAPI and implement all API endpoints in it. Use pipenv to manage the dependencies in the virtual environment.
 
-User groups
+**User groups**
 Create the following two user groups and then create some random users and assign them to these groups from the Django admin panel. 
 
 Manager ,Delivery crew
 
 Users not assigned to a group will be considered customers. 
 
-Error check and proper status codes
+**Error check and proper status codes**
 You are required to display error messages with appropriate HTTP status codes for specific errors. These include when someone requests a non-existing item, makes unauthorized API requests, or sends invalid data in a POST, PUT or PATCH request. Here is a full list.
-HTTP Status code		Reason
+**HTTP Status code		Reason**
 200 - Ok 			For all successful GET, PUT, PATCH and DELETE calls
 
 201 - Created		For all successful POST requests
@@ -38,7 +38,7 @@ You can use Djoser in your project to automatically create the following endpoin
 
 
 
-Endpoint 			Role 								Method		Purpose
+**Endpoint 			Role 								Method		Purpose**
 
 /api/users 			No role required  					POST			Creates a new user with name, email and password 
 
@@ -46,8 +46,8 @@ Endpoint 			Role 								Method		Purpose
 
 /token/login/		Anyone with a valid username and password 	POST			Generates access tokens that can be used in other API calls in this project
 
-
-Menu-items endpoints 
+**
+Menu-items endpoints **
 
 Endpoint				Role						Method				Purpose
 
@@ -69,9 +69,9 @@ Endpoint				Role						Method				Purpose
 
 /api/menu-items/{menuItem}	Manager					DELETE				Deletes menu item
 
-User group management endpoints
+**User group management endpoints
 
-Endpoint					Role				Method			Purpose
+Endpoint					Role				Method			Purpose**
 
 /api/groups/manager/users			Admin			GET				Returns all managers
 
