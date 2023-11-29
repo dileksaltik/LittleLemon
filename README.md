@@ -1,4 +1,4 @@
-# LittleLemon
+# LittleCafee
 
 **REST API Project**
 
@@ -159,19 +159,7 @@ Implement proper filtering, pagination and sorting capabilities for /api/menu-it
 20.	Customers can place orders
 
 21.	Customers can browse their own orders
-
-
-**Role		id	username	password	token**
-admin		1	admin		admin		8a569ebb479169924c4c18fdc6ff42e0662482d7
-manager		2	joedohn		admin@10!	b804487ea59de355de7ed1a34dd3bd014d1cf1c3	
-delivery crew   4	ginalucky 	admin@10!	a5939a2ade75b776d8ee6cd0d83e29a136fa2967
-customer  	6	customer	admin@10!	363d436cd21d993ae8049da8b274824aa327d7ce 
-customer 	7	customer2  	admin@10!	128b89858b8e8a44de6a01ff9d17e651e8a9c01f
-customer  	5	alican 		admin@10!	86e4fe1ad2f0741413e6bd99e125823f0e57ca4b
-user		12 	delivery_crew_5 admin@10!   **you can use this user to take token and assign to delivery_crew group by using post method to this endpoint http://127.0.0.1:8000/api/groups/deliverycrew/users/ in the review questions this endpoint is written wrong, to the request body you need to write username delivery_crew_5
  
-
-**To test last two questions.** You need to use "POST" http://127.0.0.1:8000/api/cart/menu-items/ this endpoint with customer token. This will allow customer to add menu items into his cart. You need menuitem, quantity for request body. Now the customer has menuitems in his cart. Then convert cart to order, you will use "POST" http://127.0.0.1:8000/api/cart/orders/ 
 
  
 
